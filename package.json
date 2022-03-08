@@ -1,0 +1,20 @@
+{
+  "name": "dailynotes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^9.0.0",
+    "luxon": "^2.3.1"
+  },
+  "bin": {
+    "dailynote": "./index.js"
+  },
+  "type": "module"
+}
