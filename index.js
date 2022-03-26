@@ -3,6 +3,7 @@ import fs from "fs";
 import { program } from "commander";
 import chalk from "chalk";
 import { createDirectory, createPath, createFileName } from "./src/helpers.js";
+import emoji from "node-emoji";
 
 const main = () => {
   const defaultDirectory = createPath();
@@ -10,20 +11,19 @@ const main = () => {
   const defaultFileName = createFileName();
   const defaultDestination = `${defaultDirectory}${defaultFileName}`;
 
-  const defaultTemplate = "./notes-template.md";
-
-  fs.copyFile(defaultTemplate, defaultDestination, (err) => {
-    if (err) {
-      console.log(chalk.red(err));
-      fs.closeSync(fs.openSync(defaultDestination, "w"));
-    } else {
-      console.log(
-        chalk.green(
-          `A markdown file was successfully created to ${defaultDirectory} with name: ${defaultFileName} : ${defaultDestination}`
-        )
-      );
-    }
-  });
+  try {
+    fs.openSync(defaultDestination, "a");
+    const dirName = `${process.cwd()}${defaultDestination.replace(/^\./, "")}`;
+    console.log(
+      chalk.green(
+        `${emoji.get("tada")}${emoji.get("tada")}${emoji.get(
+          "notebook"
+        )}${emoji.get("notebook")} A markdown file was successfully created to ${dirName}`
+      )
+    );
+  } catch (error) {
+    console.log(chalk.red(err));
+  }
 };
 
 program

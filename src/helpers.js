@@ -7,7 +7,7 @@ export const createDirectory = (path) => {
 };
 
 export const createPath = () => {
-  return `./${DateTime.local().toFormat("yyyy/LLL/")}`;
+  return `./Notes/${DateTime.local().toFormat("yyyy/LLL/")}`;
 };
 
 export const createFileName = () => `${DateTime.local().toFormat("dd-ccc")}.md`;
