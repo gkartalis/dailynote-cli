@@ -1,12 +1,12 @@
 {
-  "name": "dailynotes",
+  "name": "@gkartalis/dailynotes",
   "version": "1.0.0",
-  "description": "",
+  "description": "node script to create a markdown note for today",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "gkartalis",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.0.0",
@@ -15,7 +15,22 @@
     "node-emoji": "^1.11.0"
   },
   "bin": {
-    "dailynote": "./index.js"
+    "dailynote": "index.js"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkartalis/dailynote-cli.git"
+  },
+  "keywords": [
+    "dailynote",
+    "note",
+    "cli",
+    "markdown"
+  ],
+  "bugs": {
+    "url": "https://github.com/gkartalis/dailynote-cli/issues"
+  },
+  "homepage": "https://github.com/gkartalis/dailynote-cli#readme"
 }
