@@ -1,6 +1,6 @@
 {
   "name": "dailynotes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "node script to create a markdown note for today",
   "main": "index.js",
   "scripts": {
