@@ -1,5 +1,5 @@
 {
-  "name": "@gkartalis/dailynotes",
+  "name": "dailynotes",
   "version": "1.0.0",
   "description": "node script to create a markdown note for today",
   "main": "index.js",
